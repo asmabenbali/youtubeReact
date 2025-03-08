@@ -1,3 +1,10 @@
+
+
+// CommentSection permet aux utilisateurs d'ajouter et de modifier
+//  leurs commentaires pour une vidéo spécifique tout en gardant un état
+//  global synchronisé via Redux
+
+
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addComment, updateComment } from "../store/slices/commentSlice";
@@ -8,6 +15,9 @@ const CommentSection = ({ videoId }) => {
   const dispatch = useDispatch();
   const comments = useSelector((state) => state.comments[videoId] || []);
 
+
+
+  // ajouter commntaire
   const handleSubmit = (e) => {
     e.preventDefault();
     if (newComment.trim()) {
@@ -22,11 +32,14 @@ const CommentSection = ({ videoId }) => {
     }
   };
 
+  // kthz id commentaire et text l9dema id l deteditincomment w text l setnewcomment
+
   const handleEdit = (commentId) => {
     const comment = comments.find((c) => c.id === commentId);
     setEditingComment(commentId);
     setNewComment(comment.text);
   };
+  // hady hya likdir update daba l text 
 
   const handleUpdate = () => {
     if (newComment.trim()) {

@@ -1,3 +1,13 @@
+// Le composant SearchAndFilter sert à rechercher et filtrer 
+// des vidéos dans une application React. Il utilise useState pour gérer 
+// les entrées de recherche et de playlist, et useSelector/useDispatch de react-redux pour 
+// synchroniser l'état global. Il inclut un champ de texte pour rechercher des vidéos et une liste
+//  déroulante pour choisir une playlist parmi celles définies dans playlists, avec des mises à jour en 
+// temps réel de l'état. Un mécanisme de debounce (commenté) est prévu pour appliquer les filtres après 300 ms. 
+// En bref, il offre une interface simple et réactive pour filtrer et naviguer dans les vidéos.
+
+
+
 // components/SearchAndFilter.jsx
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";

@@ -1,3 +1,11 @@
+// Le composant VideoCard affiche une carte de vidéo dans
+//  une application React. Il utilise Link de react-router-dom pour naviguer 
+// vers /video/${video.id} et useDispatch/useSelector de react-redux pour gérer les favoris avec
+//  l'action toggleFavorite. La carte montre une miniature, un titre cliquable, le nom de l'auteur, l
+// a durée, et un bouton HeartIcon qui indique et modifie l'état des favoris. Avec un design adaptatif 
+// (clair/sombre), il offre une présentation interactive et esthétique des vidéos.
+
+
 import { Link } from "react-router-dom";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { useDispatch, useSelector } from "react-redux";

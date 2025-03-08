@@ -16,9 +16,12 @@ const VideoPreview = () => {
     state.videos.allVideos.find((video) => video.id === id)
   );
 
+  //kn9lbo 3la video li f playlist  fsh knkhtar whda mn les playlist frah map kdar 3la vdy li wst playlist 
   const playlistVideos =
     playlists.find((p) => p.videos.some((v) => v.id === id))?.videos || [];
 
+
+                                     // iframe
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -42,6 +45,10 @@ const VideoPreview = () => {
               <span className="text-gray-600 dark:text-gray-300">
                 {currentVideo.auteur.prenom} {currentVideo.auteur.nom}
               </span>
+
+
+              {/* button likes et deslike : dispatch action li f store direct li f videoslices*/}
+
               <div className="flex space-x-2">
                 <button
                   className={`flex items-center ${
@@ -70,9 +77,17 @@ const VideoPreview = () => {
               </div>
             </div>
 
+
+       {/* commentaire 3ndha component ki hya  commentsection   */}
+
+
             <CommentSection videoId={currentVideo.id} />
           </div>
         </div>
+
+
+
+        {/* sidebar 3ndha component ki hya  SidebarVideoCard  */}
 
         <div className="space-y-4">
           <h2 className="text-xl font-semibold dark:text-white">

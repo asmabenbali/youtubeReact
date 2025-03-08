@@ -11,6 +11,9 @@ const commentSlice = createSlice({
       }
       state[videoId].push(comment);
     },
+
+    // hna khsna id dyal vdy w commenatire lihnmodifiew w text lihtkon fih new comment
+
     updateComment: (state, action) => {
       const { videoId, commentId, newText } = action.payload;
       const comments = state[videoId];

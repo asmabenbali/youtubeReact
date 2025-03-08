@@ -1,3 +1,9 @@
+
+// Le composant Navbar fournit une 
+// barre de navigation interactive avec un logo, 
+// un accès rapide aux favoris et une option de basculement entre 
+// le mode sombre et clair, tout en utilisant Redux pour la gestion de l'état global. 🚀
+
 import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 import { MoonIcon, SunIcon, HeartIcon } from "@heroicons/react/24/solid";

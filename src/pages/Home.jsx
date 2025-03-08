@@ -17,11 +17,12 @@ const Home = () => {
   } = useSelector((state) => state.videos);
 
   // Calculate paginated videos
-  const indexOfLastVideo = currentPage * videosPerPage;
-  const indexOfFirstVideo = indexOfLastVideo - videosPerPage;
+  const indexOfLastVideo = currentPage * videosPerPage; // 6       [logic : bsh nkhdo 6 vdy mn allvdys li3ndna ]
+  const indexOfFirstVideo = indexOfLastVideo - videosPerPage; // 0
+  // bsh nakhdo 6 vdy mn g3 videos dyalna 
   const currentVideos = filteredVideos.slice(
-    indexOfFirstVideo,
-    indexOfLastVideo
+    indexOfFirstVideo, // thdid first
+    indexOfLastVideo // thdid last
   );
 
   // Apply filters whenever search or playlist changes
@@ -33,11 +34,15 @@ const Home = () => {
     <div className="container mx-auto px-4 py-8">
       <SearchAndFilter />
 
+
+{/* // kndiro map 3la 6 vdy likhdinahom */}
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {currentVideos.map((video) => (
           <VideoCard key={video.id} video={video} />
         ))}
       </div>
+
 
       <Pagination
         currentPage={currentPage}

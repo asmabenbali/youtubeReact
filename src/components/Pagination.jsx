@@ -1,3 +1,8 @@
+// Le composant Pagination permet de naviguer entre plusieurs pages d'éléments
+//  en affichant des boutons numérotés et des flèches pour avancer ou reculer. Il calcule 
+// le nombre total de pages et met en surbrillance la page active. Il est interactif et 
+// utilise Tailwind CSS pour le style, avec prise en charge du mode sombre
+
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const Pagination = ({
